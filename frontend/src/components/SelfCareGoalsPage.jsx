@@ -8,7 +8,7 @@ function SelfCareGoals() {
 
   const fetchGoals = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/getgoals", { withCredentials: true });
+      const response = await axios.get("https://moodly-bhzh.onrender.com/api/getgoals", { withCredentials: true });
       setGoals(response.data);
     } catch (error) {
       console.error("Error fetching goals:", error);
@@ -22,7 +22,7 @@ function SelfCareGoals() {
   const addGoal = async () => {
     if (!newGoal.trim()) return;
     try {
-      await axios.post("http://localhost:8000/api/addgoal", { newGoal }, { withCredentials: true });
+      await axios.post("https://moodly-bhzh.onrender.com/api/addgoal", { newGoal }, { withCredentials: true });
       setNewGoal("");
       fetchGoals();
     } catch (error) {
@@ -32,7 +32,7 @@ function SelfCareGoals() {
 
   const toggleCompletion = async (id, completed) => {
     try {
-      await axios.put(`http://localhost:8000/api/updategoal/${id}`, { completed: !completed }, { withCredentials: true });
+      await axios.put(`https://moodly-bhzh.onrender.com/api/updategoal/${id}`, { completed: !completed }, { withCredentials: true });
       fetchGoals();
     } catch (error) {
       console.error("Error updating goal:", error);
@@ -41,7 +41,7 @@ function SelfCareGoals() {
 
   const deleteGoal = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/deletegoal/${id}`, { withCredentials: true });
+      await axios.delete(`https://moodly-bhzh.onrender.com/api/deletegoal/${id}`, { withCredentials: true });
       fetchGoals();
     } catch (error) {
       console.error("Error deleting goal:", error);

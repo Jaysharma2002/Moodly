@@ -6,7 +6,7 @@ function SelfCare() {
 
   const fetchGoals = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/getgoals", { withCredentials: true });
+      const response = await axios.get("https://moodly-bhzh.onrender.com/api/getgoals", { withCredentials: true });
       setGoals(response.data);
     } catch (error) {
       console.error("Error fetching goals:", error);

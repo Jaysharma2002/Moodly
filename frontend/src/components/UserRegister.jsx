@@ -19,7 +19,7 @@ function UserRegister(){
     },[text])
 
     const singup=async()=>{
-        const response=await axios.post('http://localhost:8000/api/register',{name,email,password})
+        const response=await axios.post('https://moodly-bhzh.onrender.com/api/register',{name,email,password})
         if(response.data.message==="User Created")
         {
             navigate('/login')

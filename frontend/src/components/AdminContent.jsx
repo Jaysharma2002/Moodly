@@ -14,8 +14,8 @@ function AdminContent() {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const monthlyResponse = await axios.get("http://localhost:8000/api/monthly-users", { withCredentials: true });
-                const weeklyResponse = await axios.get("http://localhost:8000/api/weekly-users", { withCredentials: true });
+                const monthlyResponse = await axios.get("https://moodly-bhzh.onrender.com/api/monthly-users", { withCredentials: true });
+                const weeklyResponse = await axios.get("https://moodly-bhzh.onrender.com/api/weekly-users", { withCredentials: true });
 
                 setMonthlyUsers(monthlyResponse.data.count);
                 console.log(monthlyResponse.data.count,monthlyResponse.data.count)

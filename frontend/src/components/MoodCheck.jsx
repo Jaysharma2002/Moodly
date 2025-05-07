@@ -20,7 +20,7 @@ function MoodCheck() {
   const saveMood = async () => {
     if (moodValue) {
       try {
-        const response = await axios.post("http://localhost:8000/api/moodentry", { moodValue }, { withCredentials: true });
+        const response = await axios.post("https://moodly-bhzh.onrender.com/api/moodentry", { moodValue }, { withCredentials: true });
   
         console.log("Response Data:", response.data);
   

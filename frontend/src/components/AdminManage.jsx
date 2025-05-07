@@ -12,16 +12,16 @@ const AdminManage = () => {
   }, []);
 
   const fetchUsers = async () => {
-    const res = await axios.get("http://localhost:8000/api/getUsers");
+    const res = await axios.get("https://moodly-bhzh.onrender.com/api/getUsers");
     setUsers(res.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editId) {
-      await axios.put(`http://localhost:8000/api/updatedUser/${editId}`, form);
+      await axios.put(`https://moodly-bhzh.onrender.com/api/updatedUser/${editId}`, form);
     } else {
-      await axios.post("http://localhost:8000/api/getUsers", form);
+      await axios.post("https://moodly-bhzh.onrender.com/api/getUsers", form);
     }
     setForm({ name: "", email: ""});
     setEditId(null);
@@ -29,7 +29,7 @@ const AdminManage = () => {
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:8000/api/deletedUser/${id}`);
+    await axios.delete(`https://moodly-bhzh.onrender.com/api/deletedUser/${id}`);
     fetchUsers();
   };
 

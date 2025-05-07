@@ -15,7 +15,7 @@ function UserProfile()
 
     useEffect(()=>{
         const fetch=async()=>{
-            const response=await axios.post("http://localhost:8000/api/userprofile",{},{withCredentials:true})
+            const response=await axios.post("https://moodly-bhzh.onrender.com/api/userprofile",{},{withCredentials:true})
             console.log(response.data)
             setEditData({
                 profileimage:response.data.profileimage || '',
@@ -51,7 +51,7 @@ function UserProfile()
         formdata.append("email",editData.email)
         formdata.append("gender",editData.gender)
         formdata.append("age",editData.age)
-        const response=await axios.post("http://localhost:8000/api/updateprofile",formdata,{withCredentials:true,headers:{"Content-Type":"multipart/form-data"}})
+        const response=await axios.post("https://moodly-bhzh.onrender.com/api/updateprofile",formdata,{withCredentials:true,headers:{"Content-Type":"multipart/form-data"}})
         console.log(response.data)
         setEditData({
             profileimage:response.data.profileimage || '',
@@ -66,7 +66,7 @@ function UserProfile()
     }
     const deleteProfileImage = async () => {
         try {
-            const response = await axios.post("http://localhost:8000/api/deleteprofileimage",{},{ withCredentials: true });
+            const response = await axios.post("https://moodly-bhzh.onrender.com/api/deleteprofileimage",{},{ withCredentials: true });
             console.log(response.data);
             setEditData((prev) => ({ ...prev, profileimage: "" }));
         } catch (error) {
@@ -79,7 +79,7 @@ function UserProfile()
             <h1 className="headertitle">User Profile</h1>
             <div className="profile-img-container">
                 <img
-                    src={editData.profileimage ? `http://localhost:8000${editData.profileimage}` : "blank-profile.png"}
+                    src={editData.profileimage ? `https://moodly-bhzh.onrender.com${editData.profileimage}` : "blank-profile.png"}
                     className="profileimage"
                     alt="Profile"
                 />

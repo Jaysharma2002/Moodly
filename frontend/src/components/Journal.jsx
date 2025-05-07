@@ -14,7 +14,7 @@ function Journal() {
 
     const fetchEntries = async () => {
         try {
-            const res = await axios.get("http://localhost:8000/api/getjournalentry", { withCredentials: true });
+            const res = await axios.get("https://moodly-bhzh.onrender.com/api/getjournalentry", { withCredentials: true });
             setJournalEntry(res.data);
         } catch (error) {
             console.error("Error fetching journal entries:", error);
@@ -28,7 +28,7 @@ function Journal() {
 
     const saveEntry = async () => {
         try {
-            await axios.post("http://localhost:8000/api/journalentry", { text, date }, { withCredentials: true });
+            await axios.post("https://moodly-bhzh.onrender.com/api/journalentry", { text, date }, { withCredentials: true });
             setText("");  
             setDate("");
             fetchEntries();
@@ -49,7 +49,7 @@ function Journal() {
         try {
             if(editId && editText)
             {
-                await axios.put("http://localhost:8000/api/editjournalentry",{editId,editText},{withCredentials:true})
+                await axios.put("https://moodly-bhzh.onrender.com/api/editjournalentry",{editId,editText},{withCredentials:true})
                 setEditId(null)
                 fetchEntries()
             }
@@ -62,7 +62,7 @@ function Journal() {
 
     const deleteEntry=async(id)=>{
         try {
-            await axios.delete(`http://localhost:8000/api/deletejournalentry/${id}`,{withCredentials:true})
+            await axios.delete(`https://moodly-bhzh.onrender.com/api/deletejournalentry/${id}`,{withCredentials:true})
             fetchEntries()
         } catch (error) {
             console.error("Error deleting journal entry:", error);

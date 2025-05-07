@@ -26,7 +26,7 @@ function LineChart() {
   useEffect(() => {
     const fetchMoodData = async () => {
       try {
-        const response = await axios.post("http://localhost:8000/api/getmoodentry", {selectedMonth,selectedYear,selectedDay},{ withCredentials: true });
+        const response = await axios.post("https://moodly-bhzh.onrender.com/api/getmoodentry", {selectedMonth,selectedYear,selectedDay},{ withCredentials: true });
         if(response.data.length>0)
         {
           console.log("Fetched Mood Data:", response.data);

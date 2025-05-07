@@ -11,7 +11,7 @@ function AI(){
 
     const generate_summary=async()=>{
         try {
-            const response = await axios.post("http://localhost:8000/api/aisummary", {selectedMonth,selectedYear}, { withCredentials: true });
+            const response = await axios.post("https://moodly-bhzh.onrender.com/api/aisummary", {selectedMonth,selectedYear}, { withCredentials: true });
             setData(response.data);
         } catch (error) {
             console.error("Error fetching AI summary:", error);
@@ -26,7 +26,7 @@ function AI(){
         setInput("");
 
         try {
-            const response = await axios.post("http://localhost:8000/api/chatbot", { message: input });
+            const response = await axios.post("https://moodly-bhzh.onrender.com/api/chatbot", { message: input });
             const botReply = response.data;
 
             setMessages([...newMessages, { text: botReply, sender: "bot" }]);

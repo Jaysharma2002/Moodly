@@ -27,7 +27,7 @@ function BarChart() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.post("http://localhost:8000/api/getmoodentry", {selectedMonth,selectedYear,selectedDay},{ withCredentials: true });
+                const response = await axios.post("https://moodly-bhzh.onrender.com/api/getmoodentry", {selectedMonth,selectedYear,selectedDay},{ withCredentials: true });
                 if (response.data && response.data.length > 0) {
                     const formattedData = response.data.map((entry) => ({
                         date: entry.date.slice(0, 10),
