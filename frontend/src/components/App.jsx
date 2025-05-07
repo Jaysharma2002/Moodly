@@ -1,19 +1,19 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Userlogin from "./components/Userlogin";
-import UserRegister from "./components/UserRegister";
-import Header from "./components/Header";
-import Content from "./components/Content";
-import Journal from "./components/Journal";
-import MoodAnalyticsPage from "./components/MoodAnalyticsPage";
-import SelfCareGoals from "./components/SelfCareGoalsPage";
-import UserProfile from "./components/UserProfile";
-import LandingPage from './components/LandingPage'
-import AI from "./components/AI";
-import AdminLogin from "./components/AdminLogin";
-import AdminHeader from "./components/AdminHeader";
-import AdminContent from './components/AdminContent'
-import AdminManage from "./components/AdminManage";
+import Userlogin from "./Userlogin";
+import UserRegister from "./UserRegister";
+import Header from "./Header";
+import Content from "./Content";
+import Journal from "./Journal";
+import MoodAnalyticsPage from "./MoodAnalyticsPage";
+import SelfCareGoals from "./SelfCareGoalsPage";
+import UserProfile from "./UserProfile";
+import LandingPage from './LandingPage'
+import AI from "./AI";
+import AdminLogin from "./AdminLogin";
+import AdminHeader from "./AdminHeader";
+import AdminContent from './AdminContent'
+import AdminManage from "./AdminManage";
 function App() {
   return (
     <Router>
