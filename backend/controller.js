@@ -3,7 +3,7 @@ import fs from "fs"
 import path from "path"
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import dotenv from 'dotenv'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs';
 dotenv.config();
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
