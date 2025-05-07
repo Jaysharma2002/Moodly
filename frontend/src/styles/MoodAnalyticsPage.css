@@ -1,0 +1,52 @@
+.mood-analytics-container {
+    padding-top: 50px;
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mood-analytics-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.titilep{
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.charts-container {
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.chart-card {
+    width:100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.chart-card:hover {
+    transform: scale(1.02);
+}
+
+.chart-card h2 {
+    font-size: 22px;
+    color: #444;
+    margin-bottom: 15px;
+}
+

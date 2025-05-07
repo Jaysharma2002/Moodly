@@ -1,0 +1,66 @@
+.container-piechart{
+    width: auto;
+    height: auto;
+    margin:auto;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.filter-container-piechart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding:20px;
+}
+
+.filter-container-piechart label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-container-piechart select,.filter-container-piechart input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-container-piechart select:hover,.filter-container-piechart input:hover {
+    border-color: #357ABD;
+}
+
+.filter-container-piechart select:focus,.filter-container-piechart input:focus {
+    border-color: #357ABD;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+.week-nav-buttons{
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+.week-nav-buttons:disabled{
+    background-color: #b0a8c5;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}
+.Doughnut-container{
+    height:250px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}

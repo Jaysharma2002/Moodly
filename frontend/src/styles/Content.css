@@ -1,0 +1,117 @@
+html,body{
+    width:100%;
+    height: 100%;
+    padding:0px;
+    margin:0px;
+}
+
+.content-container {
+    width:100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+.hero-text {
+    font-family: 'Poppins';
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+.hero h1,.hero p {
+    color:white;
+}
+
+.journal-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.journal-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.journal-btn:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    width:100%;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    padding: 5px 0px;
+}
+.carousel-container {
+    width: 100%;
+    height: 300px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+
+.prev-btn { left: 10px;z-index: 100; }
+.next-btn { right: 10px;z-index: 100; }
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}

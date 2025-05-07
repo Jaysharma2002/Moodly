@@ -1,0 +1,152 @@
+
+.journal-container {
+    width: 100%;
+    margin: auto;
+    padding:50px 0px 0px 0px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+.journal-container h1{
+    padding:40px 0px;
+
+}
+.journal-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.journal-input input,.journal-input textarea {
+    width: 90%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.journal-input textarea {
+    height: 100px;
+}
+
+.journal-input button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.journal-input button:hover {
+    background-color: #0056b3;
+}
+
+.journal-display {
+    text-align: left;
+    width: 100%;
+    max-width: 1350px;
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: stretch; 
+    gap: 15px; 
+    padding: 15px;
+    background: #f8f9fa; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.journal-entry {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.journal-entry.expanded {
+    max-height: 400px; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.entry-date {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.entry-text {
+    flex-grow: 1;
+    margin: 5px 0;
+}
+
+.nextandprev{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.nextandprev button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.nextandprev button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.nextandprev button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.action-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.action-btns button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.editsave-btn{
+    background-color: #28a745;
+    color: white;
+}
+
+.edit-btn{
+    background-color: #007bff;
+    color: white;
+}
+
+.editdelete-btn{
+    background-color: red;
+    color: white;
+}

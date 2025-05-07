@@ -1,0 +1,111 @@
+.Allheader {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    margin-left: 40px;
+    border-radius: 10px;
+    height: 55px;
+    width: 200px;
+    background-color: black;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family:'Poppins';
+    font-size: 18px;
+    padding-right: 40px;
+}
+
+.navlinks a {
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease-in-out;
+}
+  
+.navlinks a::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: white;
+    transition:all 0.5s;
+  }
+.navlinks a:hover::before{
+    width:100%;
+}
+
+.profile {
+    position: relative;
+}
+
+.profilebutton {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.profileexpand {
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    background: black;
+    color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.profileexpand.visible {
+    opacity: 1;
+    transform: translateY(0px);
+    pointer-events: all;
+}
+
+.profileexpand.hide {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.profileexpand button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.profileexpand button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+
+

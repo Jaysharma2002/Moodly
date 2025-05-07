@@ -1,0 +1,92 @@
+.selfcare-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 80px 20px 20px 20px;
+    background:white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.selfcaretitle {
+    font-size: 24px;
+    color: #ff7f50;
+    margin-bottom: 15px;
+}
+
+.goal-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.goal-list li {
+    background: #ffdab9;
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.goal-list li:hover {
+    background: #ffcba4;
+}
+
+.goal-list .completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.delete-button {
+    background-color: #ffdab9;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.add-goal {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.add-goal input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffa07a;
+}
+
+.add-goal button {
+    background: #ff7f50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-goal button:hover {
+    background: #ff6347;
+}
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1; 
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    width: 100%;
+}

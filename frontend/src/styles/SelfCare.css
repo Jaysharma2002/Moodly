@@ -1,0 +1,35 @@
+.self-care {
+    background: #f5f5dc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.self-care h2 {
+    color: #ff7f50;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.self-care ul {
+    list-style: none;
+    padding: 0;
+}
+
+.self-care li {
+    background: #ffe4b5;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.self-care li:hover {
+    background: #ffdead;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}

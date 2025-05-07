@@ -1,0 +1,64 @@
+.container-barchart{
+    width: 90%;
+    height: auto;
+    margin:auto;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+.nodatatext{
+    text-align: right;
+}
+.filter-container-barchart {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.filter-container-barchart label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-container-barchart select,.filter-container-barchart input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-container-barchart select:hover,.filter-container-barchart input:hover {
+    border-color: #357ABD;
+}
+
+.filter-container-barchart select:focus,.filter-container-barchart input:focus {
+    border-color: #357ABD;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+.week-nav-buttons{
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+.week-nav-buttons:disabled{
+    background-color: #b0a8c5;
+    color: #ffffff;
+    cursor: not-allowed;
+    opacity: 0.6;
+    transform: none;
+    box-shadow: none;
+}

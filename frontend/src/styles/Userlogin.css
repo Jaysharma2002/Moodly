@@ -1,0 +1,141 @@
+.outer-container{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #565167;
+}
+.signup-container{
+    background-color: #2d2638;
+    width:60%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(56,51,71,255);
+}
+.left-section{
+    position: relative;
+    padding: 10px 0px 10px 10px;
+    width:50%;
+    height: 100%;
+}
+.left-section-img{
+    border-radius: 10px;
+    width: 100%;
+    z-index: 10;
+}
+.overlay{
+    margin-left:20px ;
+    width: 80%;
+    position:absolute;
+    top: 35px;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-section{
+    position: relative;
+    padding: 10px 20px;
+    width:50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.input-group-login{
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10px;
+}
+.input-group-login input{
+    background:#3b364c;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    flex: 1;
+    margin-bottom: 10px;
+}
+.create-btn{
+    background: #6e54b5;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.login-text{
+    color:white;
+}
+.create-account{
+    color: white;
+}
+.left-section-logo{   
+    border-radius: 10px;
+    height: 30px;
+    width: 110px;
+    background-color: black;
+}
+.left-section-back-btn{
+    position: absolute;
+    background-color:transparent;
+    color: white;
+    border-radius: 10px;
+    padding:5px 12px;
+    top:0px;
+    left: 70%;
+    cursor: pointer;
+}
+.login-text a{
+    color:#736c8c;
+}
+@media only screen and (max-width:1050px){
+    .signup-container{
+        width:70%;
+    }
+}
+@media only screen and (max-width:900px){
+    .signup-container{
+        width:80%;
+    }
+}
+@media only screen and (max-width:800px){
+    .signup-container{
+        width:90%;
+    }
+}
+@media only screen and (max-width:700px){
+    .signup-container{
+        width:95%;
+        zoom:0.8
+    }
+}
+@media only screen and (max-width:575px){
+    .signup-container{
+        width:95%;
+        zoom:0.6
+    }
+}
+@media only screen and (max-width:450px){
+    .signup-container{
+        width:70%;
+        zoom:0.9
+    }
+    .left-section{
+        display: none;
+    }
+    .right-section{
+        width:100%;
+    }
+}

@@ -1,0 +1,43 @@
+.container-linechart {
+    width: 90%;
+    height: auto;
+    margin:auto;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.filter-container {
+    margin:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-container label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-container select,.filter-container input {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 2px solid #4a90e2;
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-container select:hover,.filter-container input:hover {
+    border-color: #357ABD;
+}
+
+.filter-container select:focus,.filter-container input:focus {
+    border-color: #357ABD;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
