@@ -12,12 +12,12 @@ const app = express();
 app.set('trust proxy', 1);
 
 app.use(cors({
-    origin: 'https://ecommerce-web-app-in-mern.onrender.com',
+    origin: 'https://moodly-1-lvyr.onrender.com',
     credentials: true,
 }));
 
 app.options("*", cors({
-    origin: 'https://ecommerce-web-app-in-mern.onrender.com',
+    origin: 'https://moodly-1-lvyr.onrender.com',
     credentials: true,
 }));
 
