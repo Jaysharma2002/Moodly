@@ -43,8 +43,12 @@ function LandingPage() {
             <p>Set and achieve personalized self-care goals for a balanced life.</p>
           </div>
         </div>
+        <div className="feature-card">
+            <img src="Ai_image.jpg" alt="AI Therapist" />
+            <h3>AI Therapist</h3>
+            <p>Chat with your personal AI therapist for supportive, compassionate conversations and mental wellness guidance.</p>
+          </div>
       </section>
-
       <footer>
         <p>© 2025 Moodly. Take care of your mind. ❤️</p>
       </footer>
