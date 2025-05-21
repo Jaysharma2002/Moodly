@@ -19,9 +19,9 @@ function BarChart() {
     };
 
     const [chartData, setChartData] = useState([]);
-    const [selectedMonth, setSelectedMonth] = useState("03");
-    const [selectedYear, setSelectedYear] = useState("2025");
-    const [selectedDay,setSelectedDay]=useState(15)
+    const [selectedMonth, setSelectedMonth] = useState("");
+    const [selectedYear, setSelectedYear] = useState("");
+    const [selectedDay,setSelectedDay]=useState()
     const [showText,setShowText]=useState("..")
 
     useEffect(() => {

@@ -162,28 +162,45 @@ export const moodentry = async (req, res) => {
 export const getmoodentry = async (req, res) => {
     try {
         const userId = req.session.userId;
-        const { selectedMonth, selectedYear ,selectedDay} = req.body;
+        const { selectedMonth, selectedYear, selectedDay } = req.body;
 
-        if (!selectedMonth || !selectedYear || !selectedDay) {
-            return res.status(400).json({ message: "Month and Year and Week are required" });
+        let moodfetch;
+
+        if (selectedMonth && selectedYear && selectedDay) {
+            const monthNumber = parseInt(selectedMonth, 10);
+            const startDate = new Date(selectedYear, monthNumber - 1, selectedDay);
+            const lastDayOfMonth = new Date(selectedYear, monthNumber, 0).getDate();
+            const endDay = Math.min(selectedDay + 6, lastDayOfMonth);
+            const endDate = new Date(selectedYear, monthNumber - 1, endDay + 1);
+
+            moodfetch = await Mood.find({
+                userId,
+                date: { $gte: startDate, $lt: endDate }
+            }).sort({ date: 1 });
+        } else {
+            // Get the user's first-ever mood entry
+            const firstEntry = await Mood.findOne({ userId }).sort({ date: 1 });
+
+            if (!firstEntry) {
+                return res.json([]); // No entries found
+            }
+
+            const startDate = new Date(firstEntry.date);
+            const endDate = new Date(startDate);
+            endDate.setDate(endDate.getDate() + 7); // 7-day range
+
+            moodfetch = await Mood.find({
+                userId,
+                date: { $gte: startDate, $lt: endDate }
+            }).sort({ date: 1 });
         }
-
-        const monthNumber = parseInt(selectedMonth, 10);
-
-        const startDate = new Date(selectedYear, monthNumber - 1, selectedDay);
-        const lastDayOfMonth = new Date(selectedYear, monthNumber, 0).getDate();
-        const endDay = Math.min(selectedDay + 6, lastDayOfMonth);
-        const endDate = new Date(selectedYear, monthNumber - 1, endDay + 1);
-
-        const moodfetch = await Mood.find({
-            userId,
-            date: { $gte: startDate, $lt: endDate }}).sort({ date: 1 });
 
         return res.json(moodfetch);
     } catch (error) {
         return res.status(500).json({ error: "Internal Server Error" });
     }
 };
+
 
 export const addgoal=async(req,res)=>{
     try {
